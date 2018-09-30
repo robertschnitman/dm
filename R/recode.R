@@ -1,12 +1,12 @@
 # recode a la` SPSS.
 # dplyr::recode is a vectorized switch().
 # Make recode() more like replace(),
-#   where the "list" input is a set of raw values to initial instead of indices.
+#   where the "list" input is a set of raw initial values to find instead of indices.
 
 recode <- function(x, initial, new) { # assumes initial/new are in the appropriate order.
   
   stopifnot(length(initial) == length(new))
-  
+
   for (i in 1:length(initial)) {
     
     if (is.na(initial[i])) {
@@ -26,11 +26,14 @@ recode <- function(x, initial, new) { # assumes initial/new are in the appropria
 }
 
 
-recodeNA  <- function(x, v) recode(x, NA, v)
-recodeNA0 <- function(x) recodeNA(x, 0)
+nvl <- function(x, v) { # similar to SQL, but for NAs. Shorthand.
 
-nvl <- function(...) { # similar to SQL, but for NAs. Shorthand.
+  ifelse(is.na(x), v, x)
+  
+}
 
-  # Not sure yet. Want to be able to say nvl(data$col1, data$col2). Row dependency.
+nvl0 <- function(x) { # Switch all NAs to 0.
+  
+  ifelse(is.na(x), 0, x)
   
 }
