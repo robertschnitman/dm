@@ -29,4 +29,8 @@ recode <- function(x, initial, new) { # assumes initial/new are in the appropria
 recodeNA  <- function(x, v) recode(x, NA, v)
 recodeNA0 <- function(x) recodeNA(x, 0)
 
-nvl <- recodeNA # similar to SQL, but for NAs. Shorthand.
+nvl <- function(...) { # similar to SQL, but for NAs. Shorthand.
+
+  # Not sure yet. Want to be able to say nvl(data$col1, data$col2). Row dependency.
+  
+}
