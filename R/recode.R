@@ -1,7 +1,7 @@
 # recode a la` SPSS.
 # dplyr::recode is a vectorized switch().
 # Make recode() more like replace(),
-#   where the "list" input are raw values to find instead of indices.
+#   where the "list" input is a set of raw values to find instead of indices.
 
 recode <- function(x, find, new) { # assumes find/new are in the appropriate order.
   
