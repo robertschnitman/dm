@@ -13,8 +13,4 @@ dup_rows <- function(x) x[duplicated(x), ]
 
 dup_nrow <- function(x) NROW(dup_rows(x))
 
-dup_indc <- function(x) {
-  
-  ifelse(duplicated(x) == TRUE, 1, 0)
-  
-}
+dup_indc <- function(x) ifelse(duplicated(x) == TRUE, 1, 0)
