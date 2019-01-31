@@ -6,9 +6,9 @@
 #' 
 #' @examples
 #' is.even(1)
-#' sapply(mtcars$gear, is.even)
+#' is.even(mtcars$gear)
 #' is.odd(2)
-#' sapply(mtcars$gear, is.odd)
+#' is.odd(mtcars$gear)
 #' 
 #' @seealso \url{https://github.com/robertschnitman/afp}; `iseven()` and `isodd` in \url{https://docs.julialang.org/en/release-0.4/stdlib/numbers/}
 #' @name is.evenodd
@@ -20,6 +20,3 @@ is.even <- function(x) x %% 2 == 0
 
 #' @rdname is.evenodd
 is.odd <- function(x) x %% 2 == 1
-  
-  
-  
