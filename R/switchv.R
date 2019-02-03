@@ -16,3 +16,5 @@ switchv <- function(x, ...) {
   output
   
 }
+
+swap <- switchv # synonym for more concise coding. Maintain switchv() for RStudio's predictive text.
