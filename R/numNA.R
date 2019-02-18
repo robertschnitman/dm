@@ -2,7 +2,7 @@
 
 numNA <- function(x, m = NULL) {
   
-  lenna <- function(y) length(is.na(y)[is.na(y)])
+  lenna <- function(y) length(y[is.na(y)])
   
   if (is.null(m)) {
     
