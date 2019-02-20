@@ -3,13 +3,13 @@
 
 between <- function(x, low, high, inclusive = TRUE)  { # SQL's between clause is inclusive (see link below).
     
-    if (inclusive == FALSE) {
+    if (inclusive == TRUE) { # https://www.w3schools.com/sql/sql_between.asp
         
-        x > low & x < high
+      x >= low & x <= high
         
-    } else { # https://www.w3schools.com/sql/sql_between.asp
+    } else { 
         
-        x >= low & x <= high
+      x > low & x < high # Literal "between".
         
     }
     
