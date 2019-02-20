@@ -1,5 +1,6 @@
 ### GOAL: Be similar to Julia's map(reverse, x).
 ## (INPUT, OUTPUT): (vector, vector)
+# Example: reverse(rownames(mtcars))
 
 reverse <- function(x) {
   
@@ -11,13 +12,15 @@ reverse <- function(x) {
   expected(x, 'character')
   
   # 1. Split.
-  splits <- mapply(function(s) strsplit(s, split = NULL), x)
+  splits <- sapply(x, strsplit, split = NULL)
   
   # 2. (Apply) Reverse.
   revs   <- lapply(splits, rev)
   
+  names(revs) <- NULL # Juxtaposition of original attributes and reversed names is confusing.
+  
   # 3. Combine.
-  output <- sapply(revs, function(y) paste0(y, sep = '', collapse = ''))
+  output <- sapply(revs, paste0, sep = '', collapse = '')
   
   output
   
