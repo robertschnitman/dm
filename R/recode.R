@@ -15,7 +15,7 @@ recode <- function(x, initial, new) { # assumes initial/new are in the appropria
 
 NAvl <- function(x, v) { # similar to SQL's nvl(), but for NAs. Shorthand.
 
-  ifelse(is.na(x), v, x)
+  replace(x, is.na(x), v)
   
 }
 
