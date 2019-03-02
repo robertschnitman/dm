@@ -6,9 +6,19 @@
 
 recode <- function(x, initial, new) { # assumes initial/new are in the appropriate order.
   
-  stopifnot(length(initial) == length(new))
+  filter <- x %in% initial
   
-  replace(x, x %in% initial, new)
+  if (length(new) == 1 | length(initial) == length(new)) { # Users may want to replace a set of values with a single element.
+    
+    output <- replace(x, filter, new)
+    
+  } else {
+    
+    stop('Length of replacement values must be either 1 or the same length as the given initial values.')
+    
+  }
+  
+  output
   
 }
 
