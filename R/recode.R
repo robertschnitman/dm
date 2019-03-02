@@ -1,8 +1,12 @@
+##### switch() alternatives.
+#### 1. recode() - compact vectorized switch.
+#### 2. switchv() - vectorized literal switch.
+
+### 1. recode() - compact vectorized switch.
 # recode a la` SPSS.
 # dplyr::recode is a vectorized switch().
 # Make recode() more like replace(),
 #   where the "list" input is a set of raw initial values to find instead of indices.
-
 
 recode <- function(x, initial, new) { # assumes initial/new are in the appropriate order.
   
@@ -34,3 +38,25 @@ NAvl0 <- function(x) { # Switch all NAs to 0.
   NAvl(x, 0)
   
 }
+
+### 2. switchv() - vectorized literal switch.
+## PURPOSE: Vectorize switch.
+## (INPUT, OUTPUT): (vector, vector)
+
+switchv <- function(x, ...) {
+  
+  if (!is.vector(x)) { 
+    
+    stop(paste0('Vector expected. Received ', class(x), '.')) 
+    
+  } # For nth-dimensional data, use switchv within the appropriate functionals.
+  
+  codes <- function(z) switch(z, ...)
+  
+  output <- sapply(x, codes)
+  
+  output
+  
+}
+
+swap <- switchv # synonym for more concise coding. Maintain switchv() for RStudio's predictive text.
