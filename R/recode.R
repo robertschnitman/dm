@@ -39,7 +39,7 @@ NAvl0 <- function(x) { # Switch all NAs to 0.
   
 }
 
-### 2. switchv() - vectorized literal switch.
+### 2. switchv() - literal vectorized switch.
 ## PURPOSE: Vectorize switch.
 ## (INPUT, OUTPUT): (vector, vector)
 
