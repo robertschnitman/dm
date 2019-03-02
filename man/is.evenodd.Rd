@@ -4,7 +4,7 @@
 \alias{is.evenodd}
 \alias{is.even}
 \alias{is.odd}
-\title{Logical statements for even and odd values.}
+\title{Boolean functions for even and odd values.}
 \usage{
 is.even(x)
 
@@ -17,7 +17,7 @@ is.odd(x)
 Boolean.
 }
 \description{
-Logical statements for even and odd values.
+Boolean functions for even and odd values.
 }
 \examples{
 is.even(1)
