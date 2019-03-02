@@ -1,4 +1,4 @@
-#' Logical statements for even and odd values.
+#' Boolean functions for even and odd values.
 #'
 #' @param x Numeric (integer).
 #' 
