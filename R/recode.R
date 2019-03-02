@@ -1,6 +1,6 @@
 ##### switch() alternatives.
 #### 1. recode() - compact vectorized switch.
-#### 2. switchv() - vectorized literal switch.
+#### 2. switchv() - literal vectorized switch.
 
 ### 1. recode() - compact vectorized switch.
 # recode a la` SPSS.
