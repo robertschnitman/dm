@@ -1,0 +1,3 @@
+keep <- function(x, ...) subset(x, ...) # a la` Stata
+
+drop <- function(x, subset, ...) subset(x, !subset, ...) # a la` Stata. Not perfect: have to call original dataframe in subset input...
