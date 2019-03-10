@@ -2,7 +2,7 @@
 #'
 #' @param x Numeric (integer).
 #' 
-#' @return Vector (Boolean or numeric).
+#' @return Vector (Boolean, numeric, character).
 #' 
 #' @examples
 #' is.even(1)
