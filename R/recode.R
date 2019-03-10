@@ -10,15 +10,20 @@
 
 recode <- function(x, initial, new) { # assumes initial/new are in the appropriate order.
   
-  filter <- x %in% initial
-  
   if (length(new) == 1 | length(initial) == length(new)) { # Users may want to replace a set of values with a single element.
     
-    output <- replace(x, filter, new)
+    output <- replace(x, x %in% initial, new)
     
   } else {
     
-    stop('Length of replacement values must be either 1 or the same length as the given initial values.')
+    li <- length(initial)
+    ln <- length(new)
+    
+    ltest <- paste0('Length of the initial set is ', li, ' and the length of the new values is ', ln, '. ')
+    
+    lcond <- 'Length of replacement vector must be either 1 or the same as the original.'
+    
+    stop(paste0(ltest, lcond))
     
   }
   
