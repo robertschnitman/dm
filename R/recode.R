@@ -31,6 +31,8 @@ recode <- function(x, initial, new) { # assumes initial/new are in the appropria
   
 }
 
+recode_all <- function(x, ...) sapply(x, function(y) recode(y, ...))
+
 
 NAvl <- function(x, v) { # similar to SQL's nvl(), but for NAs. Shorthand.
 
@@ -65,3 +67,6 @@ switchv <- function(x, ...) {
 }
 
 swap <- switchv # synonym for more concise coding. Maintain switchv() for RStudio's predictive text.
+
+switchv_all <- function(x, ...) sapply(x, function(y) switchv(y, ...))
+#swap_all    <- switchv_all # swap(mtcars, `0` = 'a') # Error in swap(mtcars, `0` = "a") :  Vector expected. Received data.frame.
