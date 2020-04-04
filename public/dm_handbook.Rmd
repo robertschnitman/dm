@@ -210,8 +210,8 @@ These functions are inspired by SPSS's `RECODE` command.[^1]
 
 [^1]: https://libguides.library.kent.edu/SPSS/RecodeVariables
 
-```{r}
-switchv(iris$Species, setosa = 1, versicolor = 2, virginica = 3)
+```{r, warning = FALSE}
+switchv(iris$Species, setosa = 4, versicolor = 5, virginica = 6)
 ```
 
 # `rename_file()`
@@ -230,9 +230,33 @@ rename_file('C:/my/folder/', 'Fall 2018', 'Spring 2019')
 
 # `stopif()`
 
+The `stopif()` function halts an execution if a condition is met.
+
+```{r, error = TRUE}
+stopif(2 < 3)
+
+stopif(2 < 3, 'This is a custom message! STOP!')
+```
+
+
 # `type_class()`
 
+The function `type_class()` provides the type and class of an object--`tc()` is a synonym. The `type()` function provides the object's type.
+
+```{r}
+type_class(mtcars)
+tc(mtcars)
+type(mtcars)
+```
+
 # `zero_flag()`
+
+The `zero_flag()` function flags a zero at the start of a value. This function is useful for formatting numbers with a specified number of digits such as Social Security Numbers.
+
+```{r}
+zero_flag(700, 4, format = 'd') # == '0700'
+```
+
 
 # References {-}
 

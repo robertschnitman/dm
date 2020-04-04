@@ -177,6 +177,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="stopif" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> <code>stopif()</code></h1>
+<p>The <code>stopif()</code> function halts an execution if a condition is met.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="stopif.html#cb53-1"></a><span class="kw">stopif</span>(<span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## Error in stopif(2 &lt; 3): Stop condition met.</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="stopif.html#cb55-1"></a><span class="kw">stopif</span>(<span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>, <span class="st">&#39;This is a custom message! STOP!&#39;</span>)</span></code></pre></div>
+<pre><code>## Error in stopif(2 &lt; 3, &quot;This is a custom message! STOP!&quot;): This is a custom message! STOP!</code></pre>
 </div>
             </section>
 

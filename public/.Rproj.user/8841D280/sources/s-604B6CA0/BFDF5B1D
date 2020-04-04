@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "BFDF5B1D",
-    "lastKnownWriteTime" : 1585991676,
-    "last_content_update" : 1585991676958,
+    "lastKnownWriteTime" : 1585992746,
+    "last_content_update" : 1585992746596,
     "path" : "~/MEGA/Personal/Scripts/R/dm/git/dm/public/dm_handbook.Rmd",
     "project_path" : "dm_handbook.Rmd",
     "properties" : {
-        "cursorPosition" : "191,0",
-        "scrollLine" : "179"
+        "cursorPosition" : "213,63",
+        "scrollLine" : "203"
     },
     "relative_order" : 1,
     "source_on_save" : false,

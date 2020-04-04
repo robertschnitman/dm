@@ -35,7 +35,7 @@ library(dm)
 
 ## `recode()`
 
-The `recode()` function presents a new way to recode variables in a different way than [SPSS's method](https://libguides.library.kent.edu/SPSS/RecodeVariables).
+The `recode()` function presents a way to recode variables differently than [SPSS's method](https://libguides.library.kent.edu/SPSS/RecodeVariables).
 
 ```{r, warning = FALSE}
 mtcars$am
