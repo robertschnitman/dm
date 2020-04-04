@@ -54,9 +54,9 @@ recode(mtcars$am, 0:1, 2:3)
 
 ## `numNA()`
 
-As inspired by Stata[^1], `numNA()` counts the number of missing values in a dataset; `rowNA()` counts the number of missing values by row; and `colNA()` counts the number of missing values by column.
+[As inspired by Stata](https://www.stata.com/manuals13/m-5missing.pdf), `numNA()` counts the number of missing values in a dataset; `rowNA()` counts the number of missing values by row; and `colNA()` counts the number of missing values by column.
 
-[^1]: https://www.stata.com/manuals13/m-5missing.pdf
+[^1]: 
 
 
 ```r
@@ -97,4 +97,6 @@ The `load_libraries()` function tests whether a set of libraries has been instal
 load_libraries(c('tidyverse', 'ggformula', 'abind'))
 ```
 
-# Footnotes
+# Reference
+
+Stata. *missing()*. https://www.stata.com/manuals13/m-5missing.pdf
