@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585978490072.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "483DA7E9",
+    "lastKnownWriteTime" : 1585978707,
+    "last_content_update" : 1585978707477,
+    "path" : "~/MEGA/Personal/Scripts/R/dm/git/dm/R/zero_flag.R",
+    "project_path" : "R/zero_flag.R",
+    "properties" : {
+        "cursorPosition" : "10,32",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,14 @@
+Package: dm
+Type: Package
+Title: Data Management Tools for R
+Version: 0.0.0.1
+Author: Robert Schnitman <robertschnitman@gmail.com>
+Maintainer: Robert Schnitman <robertschnitman@gmail.com>
+Description: Data management tools for R as inspired by Stata, SPSS, and other statistical software..
+URL: https://github.com/robertschnitman/dm
+BugReports: https://github.com/robertschnitman/dm/issues
+Depends: R (>= 3.5)
+License: GNU General Public License v3.0
+Encoding: UTF-8
+RoxygenNote: 7.0.1
+Date/Publication: 2020-04-03

@@ -1,3 +1,12 @@
-keep <- function(x, ...) subset(x, ...) # a la` Stata
+#' Keep rows a la Stata
+#' 
+#' @description A shorthand for \code{subset}.
+#' 
+#' @usage keep(x, ...)
+#'
+#' @param x An object, typically a data frame.
+#' @param ... Parameters passed to \code{subset}.
+#'
+#' @seealso \url{https://github.com/robertschnitman/dm}
 
-drop <- function(x, subset, ...) subset(x, !subset, ...) # a la` Stata. Not perfect: have to call original dataframe in subset input...
+keep <- function(x, ...) subset(x, ...) # a la` Stata
