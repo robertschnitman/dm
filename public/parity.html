@@ -142,9 +142,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="expected.html"><a href="expected.html"><i class="fa fa-check"></i><b>4</b> <code>expected()</code></a></li>
 <li class="chapter" data-level="5" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>5</b> <code>keep()</code></a></li>
 <li class="chapter" data-level="6" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>6</b> <code>load_libraries()</code></a></li>
-<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a></li>
+<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>7.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>8</b> <code>parity()</code></a></li>
-<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a></li>
+<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>9.1</b> <code>NAvl()</code></a></li>
+<li class="chapter" data-level="9.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>9.2</b> <code>switchv()</code></a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>10</b> <code>rename_file()</code></a></li>
 <li class="chapter" data-level="11" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>11</b> <code>stopif()</code></a></li>
 <li class="chapter" data-level="12" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>12</b> <code>type_class()</code></a></li>
@@ -170,6 +177,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="parity" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> <code>parity()</code></h1>
+<p>The function <code>parity()</code> determines whether a number is even or odd. This function and its related functions <code>is.even()</code> and <code>is.odd()</code> are inspired by Julia’s <code>iseven()</code> and <code>isodd()</code> functions.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> The <code>get_even()</code> and <code>get_odd()</code> functions subset a vector for its even and odd numbers respectively.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="parity.html#cb28-1"></a><span class="kw">parity</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<pre><code>##  [1] &quot;even&quot; &quot;even&quot; &quot;odd&quot;  &quot;odd&quot;  &quot;even&quot; &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;even&quot;
+## [11] &quot;even&quot; &quot;odd&quot;  &quot;odd&quot;  &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;odd&quot;  &quot;even&quot; &quot;odd&quot; 
+## [21] &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;even&quot;
+## [31] &quot;even&quot; &quot;even&quot;</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="parity.html#cb30-1"></a><span class="kw">is.even</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="parity.html#cb32-1"></a><span class="kw">is.even</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<pre><code>##  [1]  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
+## [13] FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
+## [25]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="parity.html#cb34-1"></a><span class="kw">is.odd</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="parity.html#cb36-1"></a><span class="kw">is.odd</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<pre><code>##  [1] FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE
+## [13]  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE
+## [25] FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="parity.html#cb38-1"></a><span class="kw">get_odd</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<pre><code>##  [1] 1 1 1 3 3 3 1 1 1 1</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="parity.html#cb40-1"></a><span class="kw">get_even</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<pre><code>##  [1] 4 4 2 4 2 2 4 4 4 4 4 2 2 2 4 2 2 2 4 6 8 2</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p><a href="https://libguides.library.kent.edu/SPSS/RecodeVariables" class="uri">https://libguides.library.kent.edu/SPSS/RecodeVariables</a><a href="parity.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

@@ -142,9 +142,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="expected.html"><a href="expected.html"><i class="fa fa-check"></i><b>4</b> <code>expected()</code></a></li>
 <li class="chapter" data-level="5" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>5</b> <code>keep()</code></a></li>
 <li class="chapter" data-level="6" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>6</b> <code>load_libraries()</code></a></li>
-<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a></li>
+<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>7.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>8</b> <code>parity()</code></a></li>
-<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a></li>
+<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>9.1</b> <code>NAvl()</code></a></li>
+<li class="chapter" data-level="9.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>9.2</b> <code>switchv()</code></a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>10</b> <code>rename_file()</code></a></li>
 <li class="chapter" data-level="11" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>11</b> <code>stopif()</code></a></li>
 <li class="chapter" data-level="12" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>12</b> <code>type_class()</code></a></li>
@@ -170,6 +177,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="numna" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> <code>numNA()</code></h1>
+<p>Similar to Stata,<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> numNA counts the number of missing values: if m is set to 1, then it counts the number of missing values per row; if set to 2, then it counts the number of missing values per column; otherwise, it counts the total number of missing values.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="numna.html#cb22-1"></a><span class="kw">numNA</span>(airquality)</span></code></pre></div>
+<pre><code>## [1] 44</code></pre>
+<div id="rownacolna" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> <code>rowNA()</code>/<code>colNA()</code></h2>
+<p>The function <code>rowNA()</code> is the equivalent of <code>numNA(x, 1)</code>, where x is a data frame. It counts the number of missing values per row. The function <code>colNA()</code> does the same but per column.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="numna.html#cb24-1"></a><span class="kw">rowNA</span>(airquality)</span></code></pre></div>
+<pre><code>##   [1] 0 0 0 0 2 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2 0 0 0 0 1 1 1 1 1 1
+##  [38] 0 1 0 0 1 1 0 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 0 0 0 1 0 0
+##  [75] 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 0 0 0 1 0 0 0 0
+## [112] 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+## [149] 0 1 0 0 0</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="numna.html#cb26-1"></a><span class="kw">colNA</span>(airquality)</span></code></pre></div>
+<pre><code>##   Ozone Solar.R    Wind    Temp   Month     Day 
+##      37       7       0       0       0       0</code></pre>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p><a href="https://libguides.library.kent.edu/SPSS/RecodeVariables" class="uri">https://libguides.library.kent.edu/SPSS/RecodeVariables</a><a href="numna.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

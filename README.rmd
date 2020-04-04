@@ -33,12 +33,13 @@ library(dm)
 
 # Examples
 
-## `swap()`
+## `recode()`
 
-The `swap()` function presents an [SPSS-like way to recode values](https://libguides.library.kent.edu/SPSS/RecodeVariables). It is essentially a vectorized `switch()`.
+The `recode()` function presents a new way to recode variables in a different way than [SPSS's method](https://libguides.library.kent.edu/SPSS/RecodeVariables).
 
 ```{r, warning = FALSE}
-swap(iris$Species, setosa = 4, versicolor = 5, virginica = 6)
+mtcars$am
+recode(mtcars$am, 0:1, 2:3)
 ```
 
 ## `numNA()`

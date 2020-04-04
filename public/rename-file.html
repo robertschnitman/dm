@@ -142,9 +142,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="expected.html"><a href="expected.html"><i class="fa fa-check"></i><b>4</b> <code>expected()</code></a></li>
 <li class="chapter" data-level="5" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>5</b> <code>keep()</code></a></li>
 <li class="chapter" data-level="6" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>6</b> <code>load_libraries()</code></a></li>
-<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a></li>
+<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>7.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>8</b> <code>parity()</code></a></li>
-<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a></li>
+<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>9.1</b> <code>NAvl()</code></a></li>
+<li class="chapter" data-level="9.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>9.2</b> <code>switchv()</code></a></li>
+</ul></li>
 <li class="chapter" data-level="10" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>10</b> <code>rename_file()</code></a></li>
 <li class="chapter" data-level="11" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>11</b> <code>stopif()</code></a></li>
 <li class="chapter" data-level="12" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>12</b> <code>type_class()</code></a></li>
@@ -170,6 +177,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="rename_file" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> <code>rename_file()</code></h1>
+<p>The function <code>rename_file()</code> renames files in a directory based on a given pattern. It has three inputs:</p>
+<ol style="list-style-type: decimal">
+<li><code>filepath</code>, which specifies the desired directory of where the files to be renamed are;</li>
+<li><code>pattern_now</code>, which is a regular expression pattern of the file names as they currently are; and</li>
+<li><code>pattern_new</code>, which is the desired string that replaces the file names detected in <code>pattern_now</code>.</li>
+</ol>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="rename-file.html#cb53-1"></a><span class="co"># From a folder, replace file names having &quot;Fall 2018&quot; with &quot;Spring 2019.&quot;</span></span>
+<span id="cb53-2"><a href="rename-file.html#cb53-2"></a><span class="kw">rename_file</span>(<span class="st">&#39;C:/my/folder/&#39;</span>, <span class="st">&#39;Fall 2018&#39;</span>, <span class="st">&#39;Spring 2019&#39;</span>)</span></code></pre></div>
 </div>
             </section>
 
