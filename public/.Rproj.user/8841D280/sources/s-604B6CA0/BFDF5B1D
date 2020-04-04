@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585981078115.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BFDF5B1D",
+    "lastKnownWriteTime" : 1585991231,
+    "last_content_update" : 1585991231810,
+    "path" : "~/MEGA/Personal/Scripts/R/dm/git/dm/public/dm_handbook.Rmd",
+    "project_path" : "dm_handbook.Rmd",
+    "properties" : {
+        "cursorPosition" : "210,6",
+        "scrollLine" : "203"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

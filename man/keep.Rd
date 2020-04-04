@@ -15,5 +15,5 @@ keep(x, ...)
 A shorthand for \code{subset}.
 }
 \seealso{
-\url{https://github.com/robertschnitman/dm}
+\url{https://github.com/robertschnitman/dm}, \url{https://www.stata.com/manuals13/gsw12.pdf}
 }

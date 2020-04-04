@@ -9,6 +9,10 @@
 #' @param pattern_new Desired string to replace the file names detected in \code{pattern_now}.
 #' 
 #' @details Renames files in a specified directory based on a given pattern.
+#' 
+#' @example 
+#' # BE CAREFUL WHEN EXECUTING
+#' 
 #'
 #' @seealso \url{https://github.com/robertschnitman/dm}
 

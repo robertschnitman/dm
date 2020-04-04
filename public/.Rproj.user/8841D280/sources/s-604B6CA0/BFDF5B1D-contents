@@ -1,0 +1,255 @@
+---
+documentclass: book
+title:  Handbook for the dm R Package
+author: "Robert Schnitman"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook: 
+    config:
+      toc:
+        collapse: section
+      search: yes
+  bookdown::pdf_book: default
+biblio-style: apalike
+link-citations: yes
+description: "The purpose of the dm R package is to provide data management tools as inspired by Stata, SPSS, and other statistical packages."
+---
+
+# Introduction {-#index}
+
+**UNDER CONSTRUCTION**
+
+The `dm` package is inspired by the data management functions in other statistical packages such as Stata and SPSS. The purpose of this package is to simplify data management/checking.
+
+# Installation {-}
+
+Currently, this package is only available on Github, so please use `devtools` to install this package.
+
+```{r, eval = FALSE}
+if (!require(devools)) {
+  
+  install.packages('devtools')
+  library(devtools)
+  
+}
+
+install_github('robertschnitman/dm')
+```
+
+```{r, message = FALSE}
+library(dm)
+```
+
+# `between()`
+
+The `between()` function acts similar to SQL's `BETWEEN` clause[^1], conditioning values between lower and upper limits.
+
+The function has four parameters:
+
+1. `x`, a vector;
+1. `low`, a user-specified lower limit;
+1. `high`, a user-specified upper limit; and
+1. `inclusive = TRUE`, an input that determines whether the `between()` function will condition inclusive (if `TRUE`) of the specified limits or not (if `FALSE`).
+
+A vector is returned by the function.
+
+[^1]: https://www.w3schools.com/sql/sql_between.asp
+
+```{r}
+k <- 1:100
+between(k, 5, 24)
+```
+
+```{r}
+subset(mtcars, between(mpg, 18, 21, inclusive = FALSE))
+```
+
+# `dedup()`
+
+The `dedup()` function deduplicates data. It functions the same as `unique()`.
+
+```{r}
+dedup(iris$Species)
+```
+
+
+## `dup_rows()`
+
+The `dup_rows()` functions returns the duplicated rows in a 2-dimensional dataset. Functionally the same as `x[duplicated(x), ]`, where `x` is a matrix or data frame.
+
+```{r}
+dup_rows(iris)
+```
+
+
+## `dup_nrow()`
+
+The `dup_nrow()` function counts the number of duplicates in a dataset.
+
+```{r}
+dup_nrow(iris)
+```
+
+## `dup_mark()`
+
+The `dup_mark()` function codes duplicate rows with a 1 and non-duplicates with a 0.
+
+```{r}
+dup_mark(iris)
+```
+
+
+# `differ2()`
+
+The `differ2()` function codes differences between two vectors as a 1; otherwise, 0. This function is based on Stata's `egen differ()` command. [^1]
+
+[^1]: https://www.stata.com/manuals13/degen.pdf
+
+```{r}
+x <- 1:5
+y <- c(1, 6, 3, 8, 5)
+
+z <- differ2(x, y)
+
+cbind(x, y, z)
+```
+
+# `expected()`
+
+The `expected()` function stops an execution if a specific class is not expected.
+
+```{r, error = TRUE}
+expected(2, 'character')
+```
+
+# `keep()`
+
+The `keep()` function behaves the same as `subset()`. The naming scheme is inspired by Stata's `keep` command.[^1]
+
+[^1]: https://www.stata.com/manuals13/gsw12.pdf
+
+```{r}
+keep(mtcars, between(mpg, 18, 21))
+```
+
+# `load_libraries()`
+
+The `load_libraries()` function checks whether a set of libraries have been installed: if the libraries exist, the function will load them; otherwise, the function will install and then load them.
+
+```{r, eval = FALSE}
+load_libraries('tidyverse', 'abind', 'ggformula')
+```
+
+# `numNA()`
+
+Similar to Stata,[^1] numNA counts the number of missing values: if m is set to 1, then it counts the number of missing values per row; if set to 2, then it counts the number of missing values per column; otherwise, it counts the total number of missing values.
+
+[^1]: https://www.stata.com/manuals13/m-5missing.pdf
+
+```{r}
+numNA(airquality)
+```
+
+## `rowNA()`/`colNA()`
+
+The function `rowNA()` is the equivalent of `numNA(x, 1)`, where x is a data frame. It counts the number of missing values per row. The function `colNA()` does the same but per column.
+
+```{r}
+rowNA(airquality)
+colNA(airquality)
+```
+
+
+# `parity()`
+
+The function `parity()` determines whether a number is even or odd. This function and its related functions `is.even()` and `is.odd()` are inspired by Julia's `iseven()` and `isodd()` functions.[^1] The `get_even()` and `get_odd()` functions subset a vector for its even and odd numbers respectively.
+
+[^1]: https://docs.julialang.org/en/release-0.4/stdlib/numbers/
+
+```{r}
+parity(mtcars$carb)
+is.even(1)
+is.even(mtcars$carb)
+is.odd(2)
+is.odd(mtcars$carb)
+get_odd(mtcars$carb)
+get_even(mtcars$carb)
+```
+
+
+# `recode()`
+
+The `recode()` function replaces an initial set of values with a new set of values for a vector. The function `recode_all()` applies `recode()` to all columns in a dataset.
+
+The inputs for `recode()` are the following:
+
+1. a vector;
+1. a set of values to replace ("initial values"); and
+1. a set of values values that will replace the initial values.
+
+```{r}
+mtcars$am
+recode(mtcars$am, 0:1, 2:3)
+```
+
+## `NAvl()`
+
+The `NAvl()` function replaces a vector's missing values with a specified value set. The function `NAvl0` replaces a vector's missing values with 0.
+
+```{r}
+with(airquality, NAvl(Ozone, mean(Ozone, na.rm = TRUE)))
+NAvl0(airquality$Ozone)
+```
+
+## `switchv()`
+
+The `switchv()` function behaves the same as `switch()` except that it applies over a vector (i.e., it is a vectorized version of the latter). The function `swap` is a shorthand synonym for `switchv()`. The function `switchv_all()`/`swap_all()` applies `switchv()`/`swap()` to all columns in a data frame.
+
+These functions are inspired by SPSS's `RECODE` command.[^1]
+
+[^1]: https://libguides.library.kent.edu/SPSS/RecodeVariables
+
+```{r}
+switchv(iris$Species, setosa = 1, versicolor = 2, virginica = 3)
+```
+
+# `rename_file()`
+
+The function `rename_file()` renames files in a directory based on a given pattern. It has three inputs:
+
+1. `filepath`, which specifies the desired directory of where the files to be renamed are;
+1. `pattern_now`, which is a regular expression pattern of the file names as they currently are; and
+1. `pattern_new`, which is the desired string that replaces the file names detected in `pattern_now`.
+
+```{r, eval = FALSE}
+# From a folder, replace file names having "Fall 2018" with "Spring 2019."
+rename_file('C:/my/folder/', 'Fall 2018', 'Spring 2019')
+```
+
+
+# `stopif()`
+
+# `type_class()`
+
+# `zero_flag()`
+
+# References {-}
+
+Julia documentation. *numbers*. https://docs.julialang.org/en/release-0.4/stdlib/numbers/
+
+Kent University. *SPSS Recode*. https://libguides.library.kent.edu/SPSS/RecodeVariables
+
+Stata. *egen*. https://www.stata.com/manuals13/degen.pdf
+
+w3schools.com. *SQL BETWEEN OPERATOR*. https://www.w3schools.com/sql/sql_between.asp
+
+# See also {-}
+
+`dm` GitHub Page. https://github.com/robertschnitman/dm
+
+IBM's SPSS. https://www.ibm.com/analytics/spss-statistics-software
+
+Robert Schnitman's Profile. https://robertschnitman.netlify.com/
+
+Stata's website. https://www.stata.com/

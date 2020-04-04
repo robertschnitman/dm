@@ -17,7 +17,7 @@
 #' rowNA(airquality)
 #' colNA(airquality)
 #'
-#' @seealso \url{https://github.com/robertschnitman/dm}
+#' @seealso \url{https://github.com/robertschnitman/dm}, \url{https://www.stata.com/manuals13/m-5missing.pdf}
 
 
 #' @rdname numNA

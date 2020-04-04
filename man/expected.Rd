@@ -2,7 +2,7 @@
 % Please edit documentation in R/expected.R
 \name{expected}
 \alias{expected}
-\title{Stop execution if a specific class is expected}
+\title{Stop execution if a specific class is not expected}
 \usage{
 expected(x, expect)
 }
@@ -10,7 +10,7 @@ expected(x, expect)
 \item{x}{A scalar string.}
 }
 \description{
-Stop execution if a specific class is expected.
+Stop execution if a specific class is not expected.
 }
 \seealso{
 \url{https://github.com/robertschnitman/dm}

@@ -18,7 +18,9 @@
 #' 
 #' \code{dup_mark} codes duplicate rows with a 1; otherwise, 0.
 #' 
-#' @examples TBD
+#' @examples dedup(iris$Species)
+#' dup_rows(iris)
+#' dup_mark(iris)
 #'
 #' @seealso \url{https://github.com/robertschnitman/dm}
 

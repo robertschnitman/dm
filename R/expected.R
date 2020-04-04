@@ -1,6 +1,6 @@
-#' Stop execution if a specific class is expected
+#' Stop execution if a specific class is not expected
 #' 
-#' @description Stop execution if a specific class is expected.
+#' @description Stop execution if a specific class is not expected.
 #' 
 #' @usage expected(x, expect)
 #'

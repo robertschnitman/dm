@@ -27,7 +27,9 @@ Deduplicates a data frame.
 \code{dup_mark} codes duplicate rows with a 1; otherwise, 0.
 }
 \examples{
-TBD
+dedup(iris$Species)
+dup_rows(iris)
+dup_mark(iris)
 
 }
 \seealso{

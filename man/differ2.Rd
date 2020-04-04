@@ -10,8 +10,8 @@ differ2(x, y)
 \item{x}{A vector.}
 }
 \description{
-Code differences between two vectors as 1; else, 0.
+Code differences between two vectors as 1; else, 0. Based on Stata's \code{egen differ()} command.
 }
 \seealso{
-\url{https://github.com/robertschnitman/dm}
+\url{https://github.com/robertschnitman/dm}, \url{https://www.stata.com/manuals13/degen.pdf}
 }

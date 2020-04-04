@@ -43,9 +43,22 @@ recode <- function(x, initial, new) {
   # assumes initial/new are in the appropriate order.
   
   # Users may want to replace a set of values with a single element.
-  if (length(new) == 1 | length(initial) == length(new)) { 
+  if (length(new) == 1) { 
     
     output <- replace(x, x %in% initial, new)
+    
+  } else if (length(initial) == length(new)) {
+    
+    keys <- data.frame(iv = initial, nv = new)
+    
+    xi <- data.frame(iv = x)
+    
+    m <- merge(xi, keys,
+               by    = 'iv', 
+               all.x = TRUE, 
+               sort  = FALSE)
+    
+    output <- m$nv
     
   } else {
     
@@ -98,3 +111,6 @@ swap <- switchv # synonym for more concise coding. Maintain switchv() for RStudi
 #' @rdname switchv_all
 switchv_all <- function(x, ...) sapply(x, function(y) switchv(y, ...))
 #swap_all    <- switchv_all # swap(mtcars, `0` = 'a') # Error in swap(mtcars, `0` = "a") :  Vector expected. Received data.frame.
+
+#' @rdname swap_all
+swap_all <- switchv_all
