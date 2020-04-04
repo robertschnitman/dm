@@ -402,16 +402,15 @@ install_github(&#39;robertschnitman/dm&#39;)</code></pre>
 </div>
 <div id="examples" class="section level1">
 <h1>Examples</h1>
-<div id="recode" class="section level2">
-<h2><code>recode()</code></h2>
-<p>The <code>recode()</code> function is a new way to switch values. You provide three inputs:</p>
-<ol style="list-style-type: decimal">
-<li>A vector,</li>
-<li>An initial set of values to replace, and</li>
-<li>A set of values to replace the initial ones.</li>
-</ol>
-<pre class="r"><code>recode(mtcars$am, 0:1, 2:3)</code></pre>
-<pre><code>##  [1] 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3</code></pre>
+<div id="swap" class="section level2">
+<h2><code>swap()</code></h2>
+<p>The <code>swap()</code> function presents an <a href="https://libguides.library.kent.edu/SPSS/RecodeVariables">SPSS-like way to recode values</a>. It is essentially a vectorized <code>switch()</code>.</p>
+<pre class="r"><code>swap(iris$Species, setosa = 4, versicolor = 5, virginica = 6)</code></pre>
+<pre><code>##   [1] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+##  [38] 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+##  [75] 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 6
+## [112] 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6
+## [149] 6 6</code></pre>
 </div>
 <div id="numna" class="section level2">
 <h2><code>numNA()</code></h2>
@@ -434,8 +433,9 @@ install_github(&#39;robertschnitman/dm&#39;)</code></pre>
 <pre class="r"><code>load_libraries(c(&#39;tidyverse&#39;, &#39;ggformula&#39;, &#39;abind&#39;))</code></pre>
 </div>
 </div>
-<div id="reference" class="section level1">
-<h1>Reference</h1>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>Kent State University. <em>SPSS Recode</em>. <a href="https://libguides.library.kent.edu/SPSS/RecodeVariables" class="uri">https://libguides.library.kent.edu/SPSS/RecodeVariables</a></p>
 <p>Stata. <em>missing()</em>. <a href="https://www.stata.com/manuals13/m-5missing.pdf" class="uri">https://www.stata.com/manuals13/m-5missing.pdf</a></p>
 </div>
 

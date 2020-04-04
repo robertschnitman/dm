@@ -35,21 +35,21 @@ library(dm)
 
 # Examples
 
-## `recode()`
+## `swap()`
 
-The `recode()` function is a new way to switch values. You provide three inputs: 
-
-1. A vector,
-1. An initial set of values to replace, and 
-1. A set of values to replace the initial ones.
+The `swap()` function presents an [SPSS-like way to recode values](https://libguides.library.kent.edu/SPSS/RecodeVariables). It is essentially a vectorized `switch()`.
 
 
 ```r
-recode(mtcars$am, 0:1, 2:3)
+swap(iris$Species, setosa = 4, versicolor = 5, virginica = 6)
 ```
 
 ```
-##  [1] 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3
+##   [1] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+##  [38] 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+##  [75] 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 6
+## [112] 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6
+## [149] 6 6
 ```
 
 ## `numNA()`
@@ -97,6 +97,8 @@ The `load_libraries()` function tests whether a set of libraries has been instal
 load_libraries(c('tidyverse', 'ggformula', 'abind'))
 ```
 
-# Reference
+# References
+
+Kent State University. *SPSS Recode*. https://libguides.library.kent.edu/SPSS/RecodeVariables
 
 Stata. *missing()*. https://www.stata.com/manuals13/m-5missing.pdf
