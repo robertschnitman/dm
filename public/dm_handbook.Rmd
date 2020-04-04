@@ -238,7 +238,7 @@ rename_file('C:/my/folder/', 'Fall 2018', 'Spring 2019')
 
 Julia documentation. *numbers*. https://docs.julialang.org/en/release-0.4/stdlib/numbers/
 
-Kent University. *SPSS Recode*. https://libguides.library.kent.edu/SPSS/RecodeVariables
+Kent State University. *SPSS Recode*. https://libguides.library.kent.edu/SPSS/RecodeVariables
 
 Stata. *egen*. https://www.stata.com/manuals13/degen.pdf
 

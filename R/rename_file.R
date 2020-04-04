@@ -12,7 +12,7 @@
 #' 
 #' @example 
 #' # BE CAREFUL WHEN EXECUTING
-#' 
+#' rename_file('C:/my/folder/', 'Fall 2018', 'Spring 2019')
 #'
 #' @seealso \url{https://github.com/robertschnitman/dm}
 

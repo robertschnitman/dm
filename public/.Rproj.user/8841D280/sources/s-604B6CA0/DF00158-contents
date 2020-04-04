@@ -51,14 +51,15 @@ recode <- function(x, initial, new) {
     
     keys <- data.frame(iv = initial, nv = new)
     
-    xi <- data.frame(iv = x)
+    xi <- data.frame(id = 1:length(x),
+                     iv = x)
     
     m <- merge(xi, keys,
                by    = 'iv', 
                all.x = TRUE, 
                sort  = FALSE)
     
-    output <- m$nv
+    output <- m$nv[order(m$id)]
     
   } else {
     
