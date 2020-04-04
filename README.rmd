@@ -15,8 +15,7 @@ The `dm` package is inspired by the data management functions in other statistic
 
 Currently, this package is only available on Github, so please use `devtools` to install this package.
 
-
-```r
+```{r, eval = FALSE}
 if (!require(devools)) {
   
   install.packages('devtools')
@@ -27,8 +26,7 @@ if (!require(devools)) {
 install_github('robertschnitman/dm')
 ```
 
-
-```r
+```{r, message = FALSE}
 library(dm)
 ```
 
@@ -43,13 +41,8 @@ The `recode()` function is a new way to switch values. You provide three inputs:
 1. An initial set of values to replace, and 
 1. A set of values to replace the initial ones.
 
-
-```r
+```{r}
 recode(mtcars$am, 0:1, 2:3)
-```
-
-```
-##  [1] 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3 2 3
 ```
 
 ## `numNA()`
@@ -58,42 +51,17 @@ As inspired by Stata[^1], `numNA()` counts the number of missing values in a dat
 
 [^1]: https://www.stata.com/manuals13/m-5missing.pdf
 
-
-```r
+```{r}
 numNA(airquality) # Total number of missing values.
-```
-
-```
-## [1] 44
-```
-
-```r
 rowNA(airquality) # Number of missing values by row.
-```
-
-```
-##   [1] 0 0 0 0 2 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2 0 0 0 0 1 1 1 1 1 1
-##  [38] 0 1 0 0 1 1 0 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 0 0 0 1 0 0
-##  [75] 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 0 0 0 1 0 0 0 0
-## [112] 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-## [149] 0 1 0 0 0
-```
-
-```r
 colNA(airquality) # Number of missing values by column.
-```
-
-```
-##   Ozone Solar.R    Wind    Temp   Month     Day 
-##      37       7       0       0       0       0
 ```
 
 ## `load_libraries`()
 
 The `load_libraries()` function tests whether a set of libraries has been installed: if not, then it installs and loads them; if already installed, then the function loads the libraries as intended.
 
-
-```r
+```{r, eval = FALSE}
 load_libraries(c('tidyverse', 'ggformula', 'abind'))
 ```
 
