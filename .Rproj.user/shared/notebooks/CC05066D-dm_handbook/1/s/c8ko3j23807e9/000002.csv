@@ -1,0 +1,5 @@
+"0","install_github('robertschnitman/dm')
+"
+"2","Error in install_github(""robertschnitman/dm"") : 
+  could not find function ""install_github""
+"

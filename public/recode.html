@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 recode() | Handbook for the dm R Package</title>
+  <title>10 recode() | Handbook for the dm R Package</title>
   <meta name="description" content="The purpose of the dm R package is to provide data management tools as inspired by Stata, SPSS, and other statistical packages." />
   <meta name="generator" content="bookdown 0.18.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 recode() | Handbook for the dm R Package" />
+  <meta property="og:title" content="10 recode() | Handbook for the dm R Package" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 recode() | Handbook for the dm R Package" />
+  <meta name="twitter:title" content="10 recode() | Handbook for the dm R Package" />
   
   <meta name="twitter:description" content="The purpose of the dm R package is to provide data management tools as inspired by Stata, SPSS, and other statistical packages." />
   
@@ -24,7 +24,6 @@
 <meta name="author" content="Robert Schnitman" />
 
 
-<meta name="date" content="2020-04-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -131,7 +130,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="1" data-path="between.html"><a href="between.html"><i class="fa fa-check"></i><b>1</b> <code>between()</code></a></li>
+<li class="chapter" data-level="1" data-path="between.html"><a href="between.html"><i class="fa fa-check"></i><b>1</b> <code>between()</code></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="between.html"><a href="between.html#vector-case"><i class="fa fa-check"></i><b>1.1</b> Vector Case</a></li>
+<li class="chapter" data-level="1.2" data-path="between.html"><a href="between.html#data-frame-case"><i class="fa fa-check"></i><b>1.2</b> Data Frame Case</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="dedup.html"><a href="dedup.html"><i class="fa fa-check"></i><b>2</b> <code>dedup()</code></a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="dedup.html"><a href="dedup.html#dup_rows"><i class="fa fa-check"></i><b>2.1</b> <code>dup_rows()</code></a></li>
@@ -140,22 +143,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="differ2.html"><a href="differ2.html"><i class="fa fa-check"></i><b>3</b> <code>differ2()</code></a></li>
 <li class="chapter" data-level="4" data-path="expected.html"><a href="expected.html"><i class="fa fa-check"></i><b>4</b> <code>expected()</code></a></li>
-<li class="chapter" data-level="5" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>5</b> <code>keep()</code></a></li>
-<li class="chapter" data-level="6" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>6</b> <code>load_libraries()</code></a></li>
-<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a>
+<li class="chapter" data-level="5" data-path="fill.html"><a href="fill.html"><i class="fa fa-check"></i><b>5</b> <code>fill()</code></a></li>
+<li class="chapter" data-level="6" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>6</b> <code>keep()</code></a></li>
+<li class="chapter" data-level="7" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>7</b> <code>load_libraries()</code></a></li>
+<li class="chapter" data-level="8" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>8</b> <code>numNA()</code></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>7.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
+<li class="chapter" data-level="8.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>8.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>8</b> <code>parity()</code></a></li>
-<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a>
+<li class="chapter" data-level="9" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>9</b> <code>parity()</code></a></li>
+<li class="chapter" data-level="10" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>10</b> <code>recode()</code></a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>9.1</b> <code>NAvl()</code></a></li>
-<li class="chapter" data-level="9.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>9.2</b> <code>switchv()</code></a></li>
+<li class="chapter" data-level="10.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>10.1</b> <code>NAvl()</code></a></li>
+<li class="chapter" data-level="10.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>10.2</b> <code>switchv()</code></a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>10</b> <code>rename_file()</code></a></li>
-<li class="chapter" data-level="11" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>11</b> <code>stopif()</code></a></li>
-<li class="chapter" data-level="12" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>12</b> <code>type_class()</code></a></li>
-<li class="chapter" data-level="13" data-path="zero-flag.html"><a href="zero-flag.html"><i class="fa fa-check"></i><b>13</b> <code>zero_flag()</code></a></li>
+<li class="chapter" data-level="11" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>11</b> <code>rename_file()</code></a></li>
+<li class="chapter" data-level="12" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>12</b> <code>stopif()</code></a></li>
+<li class="chapter" data-level="13" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>13</b> <code>type_class()</code></a></li>
+<li class="chapter" data-level="14" data-path="zero-flag.html"><a href="zero-flag.html"><i class="fa fa-check"></i><b>14</b> <code>zero_flag()</code></a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="see-also.html"><a href="see-also.html"><i class="fa fa-check"></i>See also</a></li>
 </ul>
@@ -175,8 +179,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="recode" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> <code>recode()</code></h1>
+<div id="recode" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> <code>recode()</code></h1>
 <p>The <code>recode()</code> function replaces an initial set of values with a new set of values for a vector. The function <code>recode_all()</code> applies <code>recode()</code> to all columns in a dataset.</p>
 <p>The inputs for <code>recode()</code> are the following:</p>
 <ol style="list-style-type: decimal">
@@ -184,14 +188,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>a set of values to replace (“initial values”); and</li>
 <li>a set of values values that will replace the initial values.</li>
 </ol>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="recode.html#cb42-1"></a>mtcars<span class="op">$</span>am</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="recode.html#cb52-1"></a>mtcars<span class="op">$</span>am</span></code></pre></div>
 <pre><code>##  [1] 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="recode.html#cb44-1"></a><span class="kw">recode</span>(mtcars<span class="op">$</span>am, <span class="dv">0</span><span class="op">:</span><span class="dv">1</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="recode.html#cb54-1"></a><span class="kw">recode</span>(mtcars<span class="op">$</span>am, <span class="dv">0</span><span class="op">:</span><span class="dv">1</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##  [1] 3 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 2 2 2 2 2 3 3 3 3 3 3 3</code></pre>
-<div id="navl" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> <code>NAvl()</code></h2>
+<div id="navl" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> <code>NAvl()</code></h2>
 <p>The <code>NAvl()</code> function replaces a vector’s missing values with a specified value set. The function <code>NAvl0</code> replaces a vector’s missing values with 0.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="recode.html#cb46-1"></a><span class="kw">with</span>(airquality, <span class="kw">NAvl</span>(Ozone, <span class="kw">mean</span>(Ozone, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="recode.html#cb56-1"></a><span class="kw">with</span>(airquality, <span class="kw">NAvl</span>(Ozone, <span class="kw">mean</span>(Ozone, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)))</span></code></pre></div>
 <pre><code>##   [1]  41.00000  36.00000  12.00000  18.00000  42.12931  28.00000  23.00000
 ##   [8]  19.00000   8.00000  42.12931   7.00000  16.00000  11.00000  14.00000
 ##  [15]  18.00000  14.00000  34.00000   6.00000  30.00000  11.00000   1.00000
@@ -214,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## [134]  44.00000  21.00000  28.00000   9.00000  13.00000  46.00000  18.00000
 ## [141]  13.00000  24.00000  16.00000  13.00000  23.00000  36.00000   7.00000
 ## [148]  14.00000  30.00000  42.12931  14.00000  18.00000  20.00000</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="recode.html#cb48-1"></a><span class="kw">NAvl0</span>(airquality<span class="op">$</span>Ozone)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="recode.html#cb58-1"></a><span class="kw">NAvl0</span>(airquality<span class="op">$</span>Ozone)</span></code></pre></div>
 <pre><code>##   [1]  41  36  12  18   0  28  23  19   8   0   7  16  11  14  18  14  34   6
 ##  [19]  30  11   1  11   4  32   0   0   0  23  45 115  37   0   0   0   0   0
 ##  [37]   0  29   0  71  39   0   0  23   0   0  21  37  20  12  13   0   0   0
@@ -225,11 +229,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## [127]  91  47  32  20  23  21  24  44  21  28   9  13  46  18  13  24  16  13
 ## [145]  23  36   7  14  30   0  14  18  20</code></pre>
 </div>
-<div id="switchv" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> <code>switchv()</code></h2>
+<div id="switchv" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> <code>switchv()</code></h2>
 <p>The <code>switchv()</code> function behaves the same as <code>switch()</code> except that it applies over a vector (i.e., it is a vectorized version of the latter). The function <code>swap</code> is a shorthand synonym for <code>switchv()</code>. The function <code>switchv_all()</code>/<code>swap_all()</code> applies <code>switchv()</code>/<code>swap()</code> to all columns in a data frame.</p>
 <p>These functions are inspired by SPSS’s <code>RECODE</code> command.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="recode.html#cb50-1"></a><span class="kw">switchv</span>(iris<span class="op">$</span>Species, <span class="dt">setosa =</span> <span class="dv">4</span>, <span class="dt">versicolor =</span> <span class="dv">5</span>, <span class="dt">virginica =</span> <span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="recode.html#cb60-1"></a><span class="kw">switchv</span>(iris<span class="op">$</span>Species, <span class="dt">setosa =</span> <span class="dv">4</span>, <span class="dt">versicolor =</span> <span class="dv">5</span>, <span class="dt">virginica =</span> <span class="dv">6</span>)</span></code></pre></div>
 <pre><code>##   [1] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
 ##  [38] 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
 ##  [75] 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 6

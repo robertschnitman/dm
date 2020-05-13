@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 load_libraries() | Handbook for the dm R Package</title>
+  <title>7 load_libraries() | Handbook for the dm R Package</title>
   <meta name="description" content="The purpose of the dm R package is to provide data management tools as inspired by Stata, SPSS, and other statistical packages." />
   <meta name="generator" content="bookdown 0.18.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 load_libraries() | Handbook for the dm R Package" />
+  <meta property="og:title" content="7 load_libraries() | Handbook for the dm R Package" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 load_libraries() | Handbook for the dm R Package" />
+  <meta name="twitter:title" content="7 load_libraries() | Handbook for the dm R Package" />
   
   <meta name="twitter:description" content="The purpose of the dm R package is to provide data management tools as inspired by Stata, SPSS, and other statistical packages." />
   
@@ -24,7 +24,6 @@
 <meta name="author" content="Robert Schnitman" />
 
 
-<meta name="date" content="2020-04-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -131,7 +130,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="1" data-path="between.html"><a href="between.html"><i class="fa fa-check"></i><b>1</b> <code>between()</code></a></li>
+<li class="chapter" data-level="1" data-path="between.html"><a href="between.html"><i class="fa fa-check"></i><b>1</b> <code>between()</code></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="between.html"><a href="between.html#vector-case"><i class="fa fa-check"></i><b>1.1</b> Vector Case</a></li>
+<li class="chapter" data-level="1.2" data-path="between.html"><a href="between.html#data-frame-case"><i class="fa fa-check"></i><b>1.2</b> Data Frame Case</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="dedup.html"><a href="dedup.html"><i class="fa fa-check"></i><b>2</b> <code>dedup()</code></a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="dedup.html"><a href="dedup.html#dup_rows"><i class="fa fa-check"></i><b>2.1</b> <code>dup_rows()</code></a></li>
@@ -140,22 +143,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="differ2.html"><a href="differ2.html"><i class="fa fa-check"></i><b>3</b> <code>differ2()</code></a></li>
 <li class="chapter" data-level="4" data-path="expected.html"><a href="expected.html"><i class="fa fa-check"></i><b>4</b> <code>expected()</code></a></li>
-<li class="chapter" data-level="5" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>5</b> <code>keep()</code></a></li>
-<li class="chapter" data-level="6" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>6</b> <code>load_libraries()</code></a></li>
-<li class="chapter" data-level="7" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>7</b> <code>numNA()</code></a>
+<li class="chapter" data-level="5" data-path="fill.html"><a href="fill.html"><i class="fa fa-check"></i><b>5</b> <code>fill()</code></a></li>
+<li class="chapter" data-level="6" data-path="keep.html"><a href="keep.html"><i class="fa fa-check"></i><b>6</b> <code>keep()</code></a></li>
+<li class="chapter" data-level="7" data-path="load-libraries.html"><a href="load-libraries.html"><i class="fa fa-check"></i><b>7</b> <code>load_libraries()</code></a></li>
+<li class="chapter" data-level="8" data-path="numna.html"><a href="numna.html"><i class="fa fa-check"></i><b>8</b> <code>numNA()</code></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>7.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
+<li class="chapter" data-level="8.1" data-path="numna.html"><a href="numna.html#rownacolna"><i class="fa fa-check"></i><b>8.1</b> <code>rowNA()</code>/<code>colNA()</code></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>8</b> <code>parity()</code></a></li>
-<li class="chapter" data-level="9" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>9</b> <code>recode()</code></a>
+<li class="chapter" data-level="9" data-path="parity.html"><a href="parity.html"><i class="fa fa-check"></i><b>9</b> <code>parity()</code></a></li>
+<li class="chapter" data-level="10" data-path="recode.html"><a href="recode.html"><i class="fa fa-check"></i><b>10</b> <code>recode()</code></a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>9.1</b> <code>NAvl()</code></a></li>
-<li class="chapter" data-level="9.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>9.2</b> <code>switchv()</code></a></li>
+<li class="chapter" data-level="10.1" data-path="recode.html"><a href="recode.html#navl"><i class="fa fa-check"></i><b>10.1</b> <code>NAvl()</code></a></li>
+<li class="chapter" data-level="10.2" data-path="recode.html"><a href="recode.html#switchv"><i class="fa fa-check"></i><b>10.2</b> <code>switchv()</code></a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>10</b> <code>rename_file()</code></a></li>
-<li class="chapter" data-level="11" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>11</b> <code>stopif()</code></a></li>
-<li class="chapter" data-level="12" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>12</b> <code>type_class()</code></a></li>
-<li class="chapter" data-level="13" data-path="zero-flag.html"><a href="zero-flag.html"><i class="fa fa-check"></i><b>13</b> <code>zero_flag()</code></a></li>
+<li class="chapter" data-level="11" data-path="rename-file.html"><a href="rename-file.html"><i class="fa fa-check"></i><b>11</b> <code>rename_file()</code></a></li>
+<li class="chapter" data-level="12" data-path="stopif.html"><a href="stopif.html"><i class="fa fa-check"></i><b>12</b> <code>stopif()</code></a></li>
+<li class="chapter" data-level="13" data-path="type-class.html"><a href="type-class.html"><i class="fa fa-check"></i><b>13</b> <code>type_class()</code></a></li>
+<li class="chapter" data-level="14" data-path="zero-flag.html"><a href="zero-flag.html"><i class="fa fa-check"></i><b>14</b> <code>zero_flag()</code></a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="see-also.html"><a href="see-also.html"><i class="fa fa-check"></i>See also</a></li>
 </ul>
@@ -175,10 +179,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="load_libraries" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> <code>load_libraries()</code></h1>
+<div id="load_libraries" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> <code>load_libraries()</code></h1>
 <p>The <code>load_libraries()</code> function checks whether a set of libraries have been installed: if the libraries exist, the function will load them; otherwise, the function will install and then load them.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="load-libraries.html#cb21-1"></a><span class="kw">load_libraries</span>(<span class="st">&#39;tidyverse&#39;</span>, <span class="st">&#39;abind&#39;</span>, <span class="st">&#39;ggformula&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="load-libraries.html#cb31-1"></a><span class="kw">load_libraries</span>(<span class="st">&#39;tidyverse&#39;</span>, <span class="st">&#39;abind&#39;</span>, <span class="st">&#39;ggformula&#39;</span>)</span></code></pre></div>
 </div>
             </section>
 
