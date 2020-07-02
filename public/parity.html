@@ -182,26 +182,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="parity" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> <code>parity()</code></h1>
 <p>The function <code>parity()</code> determines whether a number is even or odd. This function and its related functions <code>is.even()</code> and <code>is.odd()</code> are inspired by Julia’s <code>iseven()</code> and <code>isodd()</code> functions.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> The <code>get_even()</code> and <code>get_odd()</code> functions subset a vector for its even and odd numbers respectively.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="parity.html#cb38-1"></a><span class="kw">parity</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="parity.html#cb36-1"></a><span class="kw">parity</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
 <pre><code>##  [1] &quot;even&quot; &quot;even&quot; &quot;odd&quot;  &quot;odd&quot;  &quot;even&quot; &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;even&quot;
 ## [11] &quot;even&quot; &quot;odd&quot;  &quot;odd&quot;  &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;odd&quot;  &quot;even&quot; &quot;odd&quot; 
 ## [21] &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;odd&quot;  &quot;even&quot; &quot;even&quot; &quot;even&quot; &quot;even&quot;
 ## [31] &quot;even&quot; &quot;even&quot;</code></pre>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="parity.html#cb40-1"></a><span class="kw">is.even</span>(<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="parity.html#cb38-1"></a><span class="kw">is.even</span>(<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="parity.html#cb42-1"></a><span class="kw">is.even</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="parity.html#cb40-1"></a><span class="kw">is.even</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
 <pre><code>##  [1]  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
 ## [13] FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
 ## [25]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="parity.html#cb44-1"></a><span class="kw">is.odd</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="parity.html#cb42-1"></a><span class="kw">is.odd</span>(<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="parity.html#cb46-1"></a><span class="kw">is.odd</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="parity.html#cb44-1"></a><span class="kw">is.odd</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
 <pre><code>##  [1] FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE
 ## [13]  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE
 ## [25] FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="parity.html#cb48-1"></a><span class="kw">get_odd</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="parity.html#cb46-1"></a><span class="kw">get_odd</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
 <pre><code>##  [1] 1 1 1 3 3 3 1 1 1 1</code></pre>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="parity.html#cb50-1"></a><span class="kw">get_even</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="parity.html#cb48-1"></a><span class="kw">get_even</span>(mtcars<span class="op">$</span>carb)</span></code></pre></div>
 <pre><code>##  [1] 4 4 2 4 2 2 4 4 4 4 4 2 2 2 4 2 2 2 4 6 8 2</code></pre>
 </div>
 <div class="footnotes">

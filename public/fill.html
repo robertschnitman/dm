@@ -196,11 +196,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##   0   1 
 ## 0.5 0.5</code></pre>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="fill.html#cb21-1"></a><span class="co"># Apply fill() function</span></span>
-<span id="cb21-2"><a href="fill.html#cb21-2"></a>fill_k &lt;-<span class="st"> </span><span class="kw">fill</span>(k) <span class="co"># A warning may occur</span></span></code></pre></div>
-<pre><code>## Warning in x[x_na] &lt;- sample(unique_x, len_x_na, replace = TRUE, prob = props):
-## number of items to replace is not a multiple of replacement length</code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="fill.html#cb23-1"></a><span class="co"># Compare original vector to the new vector.</span></span>
-<span id="cb23-2"><a href="fill.html#cb23-2"></a><span class="kw">cbind</span>(k, fill_k) </span></code></pre></div>
+<span id="cb21-2"><a href="fill.html#cb21-2"></a>fill_k &lt;-<span class="st"> </span><span class="kw">fill</span>(k) <span class="co"># A warning may occur</span></span>
+<span id="cb21-3"><a href="fill.html#cb21-3"></a></span>
+<span id="cb21-4"><a href="fill.html#cb21-4"></a><span class="co"># Compare original vector to the new vector.</span></span>
+<span id="cb21-5"><a href="fill.html#cb21-5"></a><span class="kw">cbind</span>(k, fill_k) </span></code></pre></div>
 <pre><code>##       k fill_k
 ## [1,]  0      0
 ## [2,]  1      1
@@ -210,14 +209,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## [6,] NA      1
 ## [7,] NA      0
 ## [8,] NA      0</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="fill.html#cb25-1"></a><span class="co"># Check if proportions were maintained</span></span>
-<span id="cb25-2"><a href="fill.html#cb25-2"></a>prop_new &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="kw">table</span>(fill_k)) </span>
-<span id="cb25-3"><a href="fill.html#cb25-3"></a></span>
-<span id="cb25-4"><a href="fill.html#cb25-4"></a>prop_new</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="fill.html#cb23-1"></a><span class="co"># Check if proportions were maintained</span></span>
+<span id="cb23-2"><a href="fill.html#cb23-2"></a>prop_new &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="kw">table</span>(fill_k)) </span>
+<span id="cb23-3"><a href="fill.html#cb23-3"></a></span>
+<span id="cb23-4"><a href="fill.html#cb23-4"></a>prop_new</span></code></pre></div>
 <pre><code>## fill_k
 ##   0   1 
 ## 0.5 0.5</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="fill.html#cb27-1"></a><span class="kw">all</span>(prop_original <span class="op">==</span><span class="st"> </span>prop_new)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="fill.html#cb25-1"></a><span class="kw">all</span>(prop_original <span class="op">==</span><span class="st"> </span>prop_new)</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 </div>
             </section>

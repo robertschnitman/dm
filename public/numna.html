@@ -182,18 +182,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="numna" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> <code>numNA()</code></h1>
 <p>Similar to Stata,<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> numNA counts the number of missing values: if m is set to 1, then it counts the number of missing values per row; if set to 2, then it counts the number of missing values per column; otherwise, it counts the total number of missing values.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="numna.html#cb32-1"></a><span class="kw">numNA</span>(airquality)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="numna.html#cb30-1"></a><span class="kw">numNA</span>(airquality)</span></code></pre></div>
 <pre><code>## [1] 44</code></pre>
 <div id="rownacolna" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> <code>rowNA()</code>/<code>colNA()</code></h2>
 <p>The function <code>rowNA()</code> is the equivalent of <code>numNA(x, 1)</code>, where x is a data frame. It counts the number of missing values per row. The function <code>colNA()</code> does the same but per column.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="numna.html#cb34-1"></a><span class="kw">rowNA</span>(airquality)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="numna.html#cb32-1"></a><span class="kw">rowNA</span>(airquality)</span></code></pre></div>
 <pre><code>##   [1] 0 0 0 0 2 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2 0 0 0 0 1 1 1 1 1 1
 ##  [38] 0 1 0 0 1 1 0 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 0 0 0 0 1 0 0
 ##  [75] 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 0 0 0 1 0 0 0 0
 ## [112] 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 ## [149] 0 1 0 0 0</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="numna.html#cb36-1"></a><span class="kw">colNA</span>(airquality)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="numna.html#cb34-1"></a><span class="kw">colNA</span>(airquality)</span></code></pre></div>
 <pre><code>##   Ozone Solar.R    Wind    Temp   Month     Day 
 ##      37       7       0       0       0       0</code></pre>
 </div>
