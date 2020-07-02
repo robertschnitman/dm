@@ -31,7 +31,7 @@ fill <- function(x) {
   
   ## For easier referencing of the NA values and their length.
   x_na     <- is.na(x) # To detect where the NAs are.
-  len_x_na <- length(x_na) # For the "size" input of sample().
+  len_x_na <- sum(x_na) # For the "size" input of sample().
   
   ## sample()'s prob should be set to the pre-existing proportions.
   props    <- prop.table(table(x))
